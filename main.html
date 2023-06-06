@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+        .popup {
+            position: absolute;
+            left: 4vw;
+            bottom: 4vh;
+            border: 1px solid black;
+            padding: 1rem;
+            min-width: 10rem;
+            background-color: bisque;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<ul>
+    <li><a href="/main.html">Home</a></li>
+    <li><a href="">Popup</a></li>
+  </ul>
+<body>
+    <main>
+        <h1>Knapp sida</h1>
+    </main>
+    <div id="popup" class="popup">
+        <h2>Webbutveckling</h2>
+        <p>Gillar du att göra uppgifter på Jens lektioner??</p>
+        <div class="div">
+            <button class="ja" id="accept">Ja🤓</button>
+            <button class="nej" id="decline">Nej😈</button>
+            <button>class="Popup" id ="popup1" </button>
+        </div>
+    </div>
+    <script>
+        const accept = document.querySelector('#accept');
+        const decline = document.querySelector('#decline');
+        const popup = document.querySelector('#popup');
+        const main = document.querySelector("main");
+        const popup1 = document.querySelector("#popup1")
+        var button = document.querySelector("button");
+        accept.addEventListener('click', (event) => {
+            console.log('Rätt svar');
+            popup.classList.toggle("hidden");
+            document.body.style.backgroundColor = "Green";
+            document.body.style.color = "White";
+            main.textContent = "Rätt svar👍";
+        })
+        decline.addEventListener('click', (event) => {
+            console.log('Fel svar');
+            popup.classList.toggle("hidden");
+            document.body.style.backgroundColor = "Red";
+            document.body.style.color = "white";
+            main.textContent = "Fel svar 😈👎"
+        })
+        popup1.addEventListener('click', (event) => {
+            popup.classList.toggle("visible");
+        })
+    </script>
+</body>
+
+</html>
