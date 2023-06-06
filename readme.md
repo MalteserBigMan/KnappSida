@@ -1,0 +1,1 @@
+Idén bakom denna hemsida är att göra knappar med animationer. Jag har tänkt att skapa en eller flera knappar som antingen rör på sig efter att ha blivit aktiverade eller rör på något annat. 
